@@ -1,0 +1,35 @@
+Como fazer um algoritmo evolutivo:
+
+1. MODELAGEM DA SOLUÇÃO (CROMOSSOMO)
+   - Definir a representação do indivíduo (Array de bits, inteiros ou floats).
+   - Cada posição do array (gene) deve representar uma variável do problema.
+
+2. FUNÇÃO DE FITNESS (AVALIAÇÃO)
+   - Criar a regra matemática que calcula o quão boa é a solução.
+
+3. POPULAÇÃO INICIAL
+   - Gerar N indivíduos de forma aleatória, respeitando os limites mínimos e máximos de cada gene.
+
+4. CICLO EVOLUTIVO (REPETIÇÃO)
+   a. Cálculo do Fitness: Calcular o desempenho de cada indivíduo. (Ex: Soma dos pontos, função de aptidão, etc.)
+   b. Estatísticas: Calcular a média e o Desvio Padrão da geração (para monitorar convergência).
+   c. Elitismo (Opcional, mas recomendado): Salvar o(s) melhor(es) indivíduo(s) 
+      para passarem intactos para a próxima geração.
+
+5. SELEÇÃO (ESCOLHA DOS PAIS)
+   - Roleta: Probabilidade proporcional ao fitness (Soma total -> Divisão -> Sorteio entre 0 e 1).
+   - Torneio: Escolhe-se K indivíduos aleatórios; o melhor entre eles vence e vira "pai".
+
+6. REPRODUÇÃO (CROSSOVER E MUTAÇÃO)
+   - Crossover (Taxa: 70% a 90%): Combina os genes de dois pais para gerar dois filhos. 
+     Ex: Crossover de um ponto (corta o array e inverte as metades).
+   - Mutação (Taxa: 1% a 5%): Altera aleatoriamente um gene. 
+     *Evite taxas acima de 10% para não perder a evolução e virar busca aleatória.
+
+7. CRITÉRIO DE PARADA
+   - Atingir um número máximo de gerações (ex: 1000).
+   - Estagnação (O melhor fitness não muda por X gerações).
+   - Encontrar o valor de fitness ideal esperado.
+
+8. RESULTADO FINAL
+   - Retornar o melhor indivíduo de todas as gerações.

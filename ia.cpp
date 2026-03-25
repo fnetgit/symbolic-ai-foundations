@@ -25,7 +25,6 @@ bool se_gostam()
         return find(lista.begin(), lista.end(), p2) != lista.end();
     }
     return false;
-
 }
 
 vector<string> gosta_de_quem()
@@ -33,8 +32,9 @@ vector<string> gosta_de_quem()
     string p;
     cout << "Diga uma pessoa pra saber de quem ela gosta: ";
     cin >> p;
-    
-    if (gostadores.count(p)){
+
+    if (gostadores.count(p))
+     {
         return gostadores[p];
     }
     return {};
@@ -45,7 +45,8 @@ int main()
     cout << se_gostam() << "\n";
 
     vector<string> resultado = gosta_de_quem();
-    for(const string& nome : resultado){
+    for (const string &nome : resultado)
+    {
         cout << nome << " ";
     }
     cout << "\n";
