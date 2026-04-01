@@ -25,8 +25,6 @@ for individuo in primeira_pop:
     individuo[2] = fitness(individuo[0], individuo[1])
     num_avaliacoes += 1
 
-print(primeira_pop[:2])
-
 
 def torneio(populacao):
     ganhador = random.sample(populacao, 2)
@@ -41,8 +39,28 @@ def elitismo(populacao):
 
 
 nova_populacao = []
-for i in range(tam_populacao):
-    pai1 = torneio(primeira_pop)
-    pai2 = torneio(primeira_pop)
-    filho = [(pai1[0] + pai2[0]) / 2, (pai1[1] + pai2[1]) / 2, 0]
-    nova_populacao.append(filho)
+pop_atual = primeira_pop
+
+for g in range(num_repeticoes):
+    nova_populacao = []
+
+    melhor_ind = elitismo(pop_atual)
+    nova_populacao.append(melhor_ind)
+
+    for i in range(tam_populacao - 1):
+        pai_1 = torneio(pop_atual)
+        pai_2 = torneio(pop_atual)
+
+        filho = [(pai_1[0] + pai_2[0]) / 2, (pai_1[1] + pai_2[1]) / 2, 0]
+
+        if random.random() < taxa_mutacao:
+            filho[0] += random.uniform(-0.5, 0.5)
+            filho[1] += random.uniform(-0.5, 0.5)
+        nova_populacao.append(filho)
+
+    for individuo in nova_populacao:
+        if individuo[2] == 0:
+            individuo[2] = fitness(individuo[0], individuo[1])
+            num_avaliacoes += 1
+
+    pop_atual = nova_populacao
