@@ -7,8 +7,8 @@ TAXA_SUCESSO = 0
 
 NUM_REPETICOES = 100
 NUM_GERACOES = 100
-TAXA_MUTACAO = 0.20
-TAM_POPULACAO = 50
+TAXA_MUTACAO = 0.1
+TAM_POPULACAO = 45
 
 
 def fitness(x, y):
@@ -37,6 +37,10 @@ for r in range(NUM_REPETICOES):
         nova_populacao = []
 
         melhor_da_gera = elitismo(pop_atual)
+
+        if melhor_da_gera[2] <= -0.35:
+            break
+
         nova_populacao.append(list(melhor_da_gera))
 
         while len(nova_populacao) < TAM_POPULACAO:
