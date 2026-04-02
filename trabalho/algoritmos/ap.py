@@ -7,7 +7,7 @@ TAXA_SUCESSO = 0
 
 NUM_REPETICOES = 100
 NUM_GERACOES = 100
-TAXA_MUTACAO = 0.2
+TAXA_MUTACAO = 0.20
 TAM_POPULACAO = 50
 
 
@@ -16,11 +16,8 @@ def fitness(x, y):
 
 
 def torneio(populacao):
-    ganhador = random.sample(populacao, 2)
-    if ganhador[0][2] < ganhador[1][2]:
-        return ganhador[0]
-    else:
-        return ganhador[1]
+    competidores = random.sample(populacao, 4)
+    return min(competidores, key=lambda x: x[2])
 
 
 def elitismo(populacao):
