@@ -1,14 +1,13 @@
 import random
 
-# random.seed(24)
-
 NUM_AVALIACOES = 0
 TAXA_SUCESSO = 0
 
 NUM_REPETICOES = 100
 NUM_GERACOES = 100
 TAXA_MUTACAO = 0.1
-TAM_POPULACAO = 45
+TAM_POPULACAO = 50
+NUM_COMPETIDORES = 4
 
 
 def fitness(x, y):
@@ -16,7 +15,7 @@ def fitness(x, y):
 
 
 def torneio(populacao):
-    competidores = random.sample(populacao, 4)
+    competidores = random.sample(populacao, NUM_COMPETIDORES)
     return min(competidores, key=lambda x: x[2])
 
 
