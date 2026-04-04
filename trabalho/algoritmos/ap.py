@@ -67,5 +67,5 @@ for r in range(NUM_REPETICOES):
         TAXA_SUCESSO += 1
 
 print(f"Total de Avaliações: {NUM_AVALIACOES}")
-print(f"Taxa de Sucesso: {TAXA_SUCESSO}%")
+print(f"Taxa de Sucesso: {(TAXA_SUCESSO/NUM_REPETICOES) * 100:.0f}%")
 print(f"Melhor fitness da última rodada: {melhor_final[2]:.3f}")
