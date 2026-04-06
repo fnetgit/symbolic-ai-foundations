@@ -50,8 +50,8 @@ for r in range(NUM_REPETICOES):
             filho_y = (pai_1[1] + pai_2[1]) / 2
 
             if random.random() < TAXA_MUTACAO:
-                filho_x += random.uniform(-0.5, 0.5)
-                filho_y += random.uniform(-0.5, 0.5)
+                filho_x += random.uniform(-0.1, 0.1)
+                filho_y += random.uniform(-0.1, 0.1)
 
             filho_x = max(min(filho_x, 5), -5)
             filho_y = max(min(filho_y, 5), -5)
