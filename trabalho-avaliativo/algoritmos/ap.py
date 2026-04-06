@@ -25,6 +25,7 @@ def elitismo(populacao):
 
 for r in range(NUM_REPETICOES):
     pop_atual = []
+    parada_antecipada = False
 
     for i in range(TAM_POPULACAO):
         x, y = random.uniform(-10, 10), random.uniform(-10, 10)
@@ -34,7 +35,6 @@ for r in range(NUM_REPETICOES):
 
     for g in range(NUM_GERACOES):
         nova_populacao = []
-
         melhor_da_gera = elitismo(pop_atual)
 
         if melhor_da_gera[2] <= -0.35:
@@ -60,7 +60,13 @@ for r in range(NUM_REPETICOES):
             NUM_AVALIACOES += 1
             nova_populacao.append([filho_x, filho_y, fit_filho])
 
+            if fit_filho <= -0.35:
+                parada_antecipada = True
+                break
+
         pop_atual = nova_populacao
+        if parada_antecipada:
+            break
 
     melhor_final = elitismo(pop_atual)
     if melhor_final[2] <= -0.35:
