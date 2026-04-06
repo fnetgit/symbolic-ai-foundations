@@ -72,6 +72,6 @@ for r in range(NUM_REPETICOES):
     if melhor_final[2] <= 0.001:
         TAXA_SUCESSO += 1
 
-print(f"Total de Avaliações: {NUM_AVALIACOES}")
+print(f"Média de NFE: {NUM_AVALIACOES / NUM_REPETICOES:.0f}")
 print(f"Taxa de Sucesso: {(TAXA_SUCESSO / NUM_REPETICOES) * 100:.0f}%")
 print(f"Melhor fitness da última rodada: {melhor_final[2]:.3f}")
