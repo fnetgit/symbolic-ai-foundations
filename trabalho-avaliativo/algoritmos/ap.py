@@ -51,6 +51,7 @@ for r in range(NUM_REPETICOES):
 
             if random.random() < TAXA_MUTACAO:
                 filho_x += random.uniform(-0.5, 0.5)
+            if random.random() < TAXA_MUTACAO:
                 filho_y += random.uniform(-0.5, 0.5)
 
             filho_x = max(min(filho_x, 10), -10)
