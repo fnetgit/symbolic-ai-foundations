@@ -1,13 +1,17 @@
 import random
 
 NUM_AVALIACOES = 0
-TAXA_SUCESSO = 0
+SUCESSOS = 0
 
 NUM_REPETICOES = 100
 NUM_GERACOES = 100
-TAXA_MUTACAO = 0.2
 TAM_POPULACAO = 85
+TAXA_MUTACAO = 0.2
 NUM_COMPETIDORES = 5
+
+MINIMO = -0.3523
+TOLERANCIA = 0.001
+ALVO = MINIMO + TOLERANCIA
 
 
 def fitness(x, y):
@@ -16,16 +20,15 @@ def fitness(x, y):
 
 def torneio(populacao):
     competidores = random.sample(populacao, NUM_COMPETIDORES)
-    return min(competidores, key=lambda x: x[2])
+    return min(competidores, key=lambda ind: ind[2])
 
 
 def elitismo(populacao):
-    return min(populacao, key=lambda x: x[2])
+    return min(populacao, key=lambda ind: ind[2])
 
 
 for r in range(NUM_REPETICOES):
     pop_atual = []
-    parada_antecipada = False
 
     for i in range(TAM_POPULACAO):
         x, y = random.uniform(-10, 10), random.uniform(-10, 10)
@@ -34,13 +37,12 @@ for r in range(NUM_REPETICOES):
         NUM_AVALIACOES += 1
 
     for g in range(NUM_GERACOES):
-        nova_populacao = []
         melhor_da_gera = elitismo(pop_atual)
 
-        if melhor_da_gera[2] <= -0.35:
+        if melhor_da_gera[2] <= ALVO:
             break
 
-        nova_populacao.append(list(melhor_da_gera))
+        nova_populacao = [list(melhor_da_gera)]
 
         while len(nova_populacao) < TAM_POPULACAO:
             pai_1 = torneio(pop_atual)
@@ -61,18 +63,12 @@ for r in range(NUM_REPETICOES):
             NUM_AVALIACOES += 1
             nova_populacao.append([filho_x, filho_y, fit_filho])
 
-            if fit_filho <= -0.35:
-                parada_antecipada = True
-                break
-
         pop_atual = nova_populacao
-        if parada_antecipada:
-            break
 
     melhor_final = elitismo(pop_atual)
-    if melhor_final[2] <= -0.35:
-        TAXA_SUCESSO += 1
+    if melhor_final[2] <= ALVO:
+        SUCESSOS += 1
 
-print(f"Média de NFE: {NUM_AVALIACOES / NUM_REPETICOES:.0f}")
-print(f"Taxa de Sucesso: {(TAXA_SUCESSO / NUM_REPETICOES) * 100:.0f}%")
-print(f"Melhor fitness da última rodada: {melhor_final[2]:.3f}")
+print(f"Média de Avaliações (NFE): {NUM_AVALIACOES / NUM_REPETICOES:.0f}")
+print(f"Taxa de Sucesso (SR): {(SUCESSOS / NUM_REPETICOES) * 100:.0f}%")
+print(f"Melhor fitness (última rodada): {melhor_final[2]:.3f}")
