@@ -7,6 +7,7 @@ NUM_REPETICOES = 100
 NUM_GERACOES = 100
 TAM_POPULACAO = 85
 TAXA_MUTACAO = 0.2
+TAXA_CROSSOVER = 0.7
 NUM_COMPETIDORES = 5
 
 MINIMO = -0.3523
@@ -48,8 +49,19 @@ for r in range(NUM_REPETICOES):
             pai_1 = torneio(pop_atual)
             pai_2 = torneio(pop_atual)
 
-            filho_x = (pai_1[0] + pai_2[0]) / 2
-            filho_y = (pai_1[1] + pai_2[1]) / 2
+            if random.random() < TAXA_CROSSOVER:
+                if random.random() < 0.5:
+                    filho_x = pai_1[0]
+                else:
+                    filho_x = pai_2[0]
+
+                if random.random() < 0.5:
+                    filho_y = pai_1[1]
+                else:
+                    filho_y = pai_2[1]
+            else:
+                filho_x = pai_1[0]
+                filho_y = pai_1[1]
 
             if random.random() < TAXA_MUTACAO:
                 filho_x += random.uniform(-0.5, 0.5)
@@ -71,4 +83,4 @@ for r in range(NUM_REPETICOES):
 
 print(f"Média de Avaliações (NFE): {NUM_AVALIACOES / NUM_REPETICOES:.0f}")
 print(f"Taxa de Sucesso (SR): {(SUCESSOS / NUM_REPETICOES) * 100:.0f}%")
-print(f"Melhor fitness (última rodada): {melhor_final[2]:.3f}")
+print(f"Melhor fitness (última rodada): {melhor_final[2]:.5f}")
