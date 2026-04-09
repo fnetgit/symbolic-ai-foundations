@@ -19,13 +19,26 @@ def fitness(x, y):
     return 0.25 * x**4 - 0.5 * x**2 + 0.1 * x + 0.5 * y**2
 
 
+def elitismo(populacao):
+    return min(populacao, key=lambda ind: ind[2])
+
+
 def torneio(populacao):
     competidores = random.sample(populacao, NUM_COMPETIDORES)
     return min(competidores, key=lambda ind: ind[2])
 
 
-def elitismo(populacao):
-    return min(populacao, key=lambda ind: ind[2])
+def crossover(pai_1, pai_2):
+    if random.random() < 0.5:
+        filho_x = pai_1[0]
+    else:
+        filho_x = pai_2[0]
+
+    if random.random() < 0.5:
+        filho_y = pai_1[1]
+    else:
+        filho_y = pai_2[1]
+    return [filho_x, filho_y]
 
 
 for r in range(NUM_REPETICOES):
@@ -50,15 +63,7 @@ for r in range(NUM_REPETICOES):
             pai_2 = torneio(pop_atual)
 
             if random.random() < TAXA_CROSSOVER:
-                if random.random() < 0.5:
-                    filho_x = pai_1[0]
-                else:
-                    filho_x = pai_2[0]
-
-                if random.random() < 0.5:
-                    filho_y = pai_1[1]
-                else:
-                    filho_y = pai_2[1]
+                filho_x, filho_y = crossover(pai_1, pai_2)
             else:
                 filho_x = pai_1[0]
                 filho_y = pai_1[1]
