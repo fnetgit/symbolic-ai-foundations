@@ -35,20 +35,21 @@ d(40)= $\sqrt{(4,6 - 5,1)^2 + (3,4 - 3,4)^2 + (1,4 - 1,5)^2 + (0,3 - 0,2)^2}$
 
 #### Ranking e resultados de proximidade (#7)
 
-d(40) = 0,52
-d(33) = 0,95
-d(6) = 1,00
-d(83) = 2,93
-d(63) = 3,24
-d(124) = 4,31
-d(148) = 4,61
-d(105) = 5,14
+d(40) = 0,51
+d(33) = 0,94
+d(6) = 0,99
+d(83) = 2,99
+d(63) = 3,26
+d(124) = 4,22
+d(148) = 4,59
+d(105) = 5,17
 
 1N = Iris-setosa (ID: 40)
 2N = Iris-setosa (ID: 33)
 3N = Iris-setosa (ID: 6)
+4N = Iris-versicolor (ID: 83)
 
-Classificação final para #7: Iris-setosa (Pois 3 os 3 vizinhos são da espécie Iris-setosa).
+Classificação final para #7: Iris-setosa (Pois 3 os 4 vizinhos são da espécie Iris-setosa).
 
 ### #72
 
@@ -63,10 +64,10 @@ d(40)= $\sqrt{(6,1 - 5,1)^2 + (2,8 - 3,4)^2 + (4,0 - 1,5)^2 + (1,3 - 0,2)^2}$
 
 #### Ranking e resultados de proximidade (#72)
 
-d(83) = 0,35
-d(63) = 0,68
+d(83) = 0,34
+d(63) = 0,67
 d(124) = 1,05
-d(148) = 1,46
+d(148) = 1,45
 d(105) = 2,06
 d(6) = 2,79
 d(40) = 2,97
@@ -75,5 +76,6 @@ d(33) = 3,19
 1N = Iris-versicolor (ID: 83)
 2N = Iris-versicolor (ID: 63)
 3N = Iris-virginica (ID: 124)
+4N = Iris-virginica (ID: 148)
 
-Classificação final para #72: Iris-versicolor (Pois a maioria dos 3 vizinhos mais próximos pertence à espécie Iris-versicolor).
+Classificação final para #72: Empate (Pois 2 vizinhos são da espécie Iris-versicolor e 2 são da espécie Iris-virginica) Teria que ser resolvido por outro critério.
