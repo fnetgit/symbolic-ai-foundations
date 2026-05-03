@@ -1,0 +1,61 @@
+@RELATION new-dataset-tsc
+
+@ATTRIBUTE idade {"18 - 20", "21 - 22", "23 - 24", "> 24"}
+@ATTRIBUTE altura {"1.50 - 1.60", "1.61 - 1.70", "1.71 - 1.80", "> 1.80"}
+@ATTRIBUTE sexo {Masculino,Feminino}
+@ATTRIBUTE cor_pele {Branca,Parda,Negra}
+@ATTRIBUTE tipo_cabelo {Liso,Ondulado,"Cacheado/Encaracolado"}
+@ATTRIBUTE oculos {Sim,Nao}
+@ATTRIBUTE genero_filme_serie_fav {Acao,Animacao,Aventura,Comedia,Documentario,Drama,Fantasia,"Ficcao Cientifica",Musical,Romance,Suspense,Terror}
+@ATTRIBUTE genero_estilo_musical_fav {Rock,Pop,Hip-hop,MPB,Rap,Sertanejo,Ecletico,Eurobeat}
+@ATTRIBUTE passatempo_fav {Assistir,Cantar,Desenhar,Instrumentos,Jogar,Futebol,"Artes marciais",Ler,Sinuca,Programar}
+@ATTRIBUTE linguagem_programacao_fav {Java,Python,TypeScript,C,GO,Lua}
+@ATTRIBUTE so_desktop_utilizado {Windows,Linux}
+@ATTRIBUTE so_mobile_utilizado {Android,IOS}
+@ATTRIBUTE ide_fav {VSCode,IntelliJ,Nvim,"Bloco de Notas"}
+@ATTRIBUTE navegador_fav {Chrome,Brave,Firefox,Edge,"Opera GX"}
+@ATTRIBUTE stack_desejada {Full-Stack,Back-End,Front-End}
+@ATTRIBUTE forma_esse_ano {Sim,Nao}
+@ATTRIBUTE terminou_terceiro_ano_escola_publica {Sim,Nao}
+@ATTRIBUTE ja_tem_uma_graduacao {Sim,Nao}
+@ATTRIBUTE em_relacionamento_afetivo {Sim,Nao}
+@ATTRIBUTE atividade_remunerada {Sim,Nao}
+@ATTRIBUTE estado_civil {"Solteiro(a)","Casado(a)","Viuvo(a)","Separado(a) judicialmente"}
+@ATTRIBUTE cidade {Anapurus,"Agua Doce",Parnaiba,Piracuruca,Teresina,Luzilandia,Tutoia,"Santa Quiteria do Maranhao","Sao Paulo",Cocal,Araioses,Brasilia,"Ilha Grande"}
+@ATTRIBUTE mora_com_pais {Sim,Nao}
+@ATTRIBUTE tem_irmaos {Sim,Nao}
+@ATTRIBUTE tem_animal_estimacao {Sim,Nao}
+@ATTRIBUTE tem_cnh {Sim,Nao}
+@ATTRIBUTE dirige {Sim,Nao}
+
+@data
+"18 - 20","1.71 - 1.80",Masculino,Branca,Ondulado,Sim,"Ficcao Cientifica",Rap,Assistir,Java,Windows,Android,VSCode,Chrome,Back-End,Sim,Sim,Nao,Nao,Sim,"Solteiro(a)","Sao Paulo",Sim,Sim,Sim,Sim,Sim
+"18 - 20","1.71 - 1.80",Masculino,Parda,"Cacheado/Encaracolado",Sim,Romance,MPB,Jogar,Python,Windows,Android,VSCode,Brave,Back-End,Sim,Sim,Nao,Sim,Sim,"Solteiro(a)","Agua Doce",Sim,Sim,Sim,Nao,Nao
+"> 24","1.61 - 1.70",Masculino,Negra,"Cacheado/Encaracolado",Nao,Terror,Pop,Cantar,Python,Windows,Android,VSCode,"Opera GX",Front-End,Sim,Nao,Sim,Sim,Sim,"Solteiro(a)",Parnaiba,Nao,Sim,Nao,Nao,Sim
+"> 24","1.61 - 1.70",Masculino,Parda,Liso,Nao,Terror,Rock,Jogar,TypeScript,Windows,Android,VSCode,Chrome,Full-Stack,Nao,Sim,Nao,Sim,Nao,"Solteiro(a)",Parnaiba,Sim,Sim,Sim,Nao,Sim
+"18 - 20","> 1.80",Masculino,Parda,Ondulado,Nao,Animacao,Pop,Instrumentos,Java,Windows,Android,IntelliJ,Brave,Full-Stack,Sim,Nao,Nao,Nao,Sim,"Solteiro(a)",Parnaiba,Sim,Sim,Sim,Sim,Sim
+"18 - 20","1.71 - 1.80",Masculino,Negra,"Cacheado/Encaracolado",Nao,Acao,Hip-hop,Jogar,TypeScript,Linux,IOS,VSCode,Edge,Full-Stack,Sim,Nao,Nao,Sim,Sim,"Solteiro(a)",Parnaiba,Sim,Nao,Sim,Nao,Sim
+"18 - 20","1.71 - 1.80",Masculino,Branca,Liso,Sim,Fantasia,Hip-hop,Jogar,Java,Linux,Android,VSCode,Brave,Back-End,Sim,Sim,Nao,Nao,Sim,"Solteiro(a)",Parnaiba,Sim,Sim,Sim,Nao,Nao
+"18 - 20","1.61 - 1.70",Masculino,Branca,Liso,Sim,Fantasia,Pop,Assistir,Python,Linux,Android,VSCode,Firefox,Full-Stack,Sim,Nao,Nao,Nao,Sim,"Solteiro(a)",Parnaiba,Sim,Nao,Sim,Nao,Sim
+"18 - 20","1.61 - 1.70",Masculino,Branca,Ondulado,Nao,Aventura,Rock,Desenhar,C,Linux,Android,Nvim,Brave,Full-Stack,Sim,Nao,Nao,Nao,Sim,"Solteiro(a)",Parnaiba,Sim,Sim,Sim,Nao,Sim
+"18 - 20","1.61 - 1.70",Masculino,Branca,"Cacheado/Encaracolado",Nao,Comedia,MPB,Futebol,Python,Windows,Android,VSCode,Chrome,Back-End,Sim,Nao,Nao,Sim,Sim,"Solteiro(a)",Anapurus,Nao,Sim,Sim,Nao,Sim
+"18 - 20","1.71 - 1.80",Masculino,Branca,Ondulado,Nao,Terror,Rock,Jogar,TypeScript,Linux,IOS,VSCode,Chrome,Full-Stack,Sim,Sim,Nao,Sim,Sim,"Solteiro(a)",Parnaiba,Sim,Sim,Sim,Sim,Sim
+"> 24","1.61 - 1.70",Masculino,Branca,Liso,Sim,Fantasia,Rock,Desenhar,Python,Windows,Android,VSCode,Brave,Front-End,Sim,Sim,Nao,Nao,Sim,"Solteiro(a)",Piracuruca,Sim,Sim,Sim,Nao,Nao
+"21 - 22","> 1.80",Masculino,Parda,"Cacheado/Encaracolado",Nao,Drama,Rock,Instrumentos,Python,Windows,Android,VSCode,Chrome,Full-Stack,Sim,Sim,Nao,Nao,Sim,"Solteiro(a)",Teresina,Sim,Sim,Nao,Nao,Nao
+"18 - 20","1.71 - 1.80",Masculino,Branca,Ondulado,Nao,Fantasia,Rock,Jogar,TypeScript,Windows,Android,VSCode,Brave,Full-Stack,Sim,Sim,Nao,Nao,Sim,"Solteiro(a)",Luzilandia,Nao,Sim,Sim,Nao,Nao
+"18 - 20","1.61 - 1.70",Masculino,Negra,"Cacheado/Encaracolado",Nao,Animacao,Rap,"Artes marciais",TypeScript,Windows,Android,VSCode,Brave,Full-Stack,Sim,Sim,Nao,Nao,Sim,"Solteiro(a)","Ilha Grande",Sim,Sim,Sim,Sim,Sim
+"> 24","1.61 - 1.70",Feminino,Negra,Ondulado,Nao,Romance,Sertanejo,Ler,Python,Linux,Android,VSCode,Firefox,Front-End,Sim,Sim,Nao,Sim,Sim,"Casado(a)",Parnaiba,Nao,Sim,Sim,Nao,Sim
+"18 - 20","1.71 - 1.80",Masculino,Parda,Ondulado,Sim,Aventura,Rock,Jogar,Python,Windows,IOS,VSCode,Chrome,Full-Stack,Sim,Nao,Nao,Nao,Nao,"Solteiro(a)",Tutoia,Nao,Sim,Nao,Nao,Nao
+"18 - 20","1.61 - 1.70",Masculino,Parda,Liso,Nao,Acao,Ecletico,Futebol,Python,Linux,Android,VSCode,Brave,Full-Stack,Sim,Nao,Nao,Sim,Sim,"Solteiro(a)",Parnaiba,Sim,Sim,Sim,Sim,Sim
+"23 - 24","1.61 - 1.70",Masculino,Negra,"Cacheado/Encaracolado",Nao,"Ficcao Cientifica",Hip-hop,Jogar,Python,Linux,Android,VSCode,Brave,Full-Stack,Sim,Sim,Nao,Sim,Sim,"Solteiro(a)","Santa Quiteria do Maranhao",Nao,Sim,Nao,Sim,Sim
+"18 - 20","1.61 - 1.70",Feminino,Parda,Liso,Sim,Drama,Pop,Ler,TypeScript,Linux,Android,VSCode,Chrome,Full-Stack,Sim,Sim,Nao,Sim,Sim,"Solteiro(a)",Cocal,Nao,Sim,Sim,Nao,Sim
+"21 - 22","1.71 - 1.80",Masculino,Parda,Ondulado,Sim,Terror,Rock,Jogar,Python,Windows,Android,VSCode,Chrome,Front-End,Sim,Nao,Nao,Nao,Sim,"Solteiro(a)",Parnaiba,Sim,Nao,Sim,Nao,Nao
+"18 - 20","1.61 - 1.70",Masculino,Branca,Liso,Sim,"Ficcao Cientifica",MPB,Jogar,Python,Linux,Android,VSCode,Edge,Back-End,Sim,Nao,Nao,Sim,Sim,"Solteiro(a)",Parnaiba,Sim,Sim,Sim,Sim,Sim
+"> 24","1.71 - 1.80",Masculino,Negra,"Cacheado/Encaracolado",Nao,Animacao,Rock,Jogar,TypeScript,Windows,Android,VSCode,Brave,Back-End,Sim,Sim,Nao,Nao,Sim,"Solteiro(a)",Parnaiba,Sim,Sim,Sim,Nao,Sim
+"21 - 22","> 1.80",Masculino,Negra,"Cacheado/Encaracolado",Nao,Terror,Rock,Sinuca,GO,Linux,Android,VSCode,Chrome,Back-End,Nao,Sim,Nao,Nao,Sim,"Solteiro(a)",Araioses,Nao,Nao,Nao,Nao,Sim
+"18 - 20","1.71 - 1.80",Masculino,Parda,Ondulado,Sim,Acao,Pop,Programar,TypeScript,Windows,Android,VSCode,Chrome,Full-Stack,Sim,Sim,Nao,Sim,Sim,"Solteiro(a)",Parnaiba,Sim,Nao,Sim,Nao,Nao
+"18 - 20","1.71 - 1.80",Masculino,Branca,Ondulado,Sim,Acao,Ecletico,Assistir,Python,Windows,IOS,VSCode,Chrome,Full-Stack,Sim,Sim,Nao,Nao,Sim,"Solteiro(a)",Parnaiba,Sim,Sim,Sim,Sim,Sim
+"18 - 20","> 1.80",Masculino,Branca,Liso,Sim,"Ficcao Cientifica",MPB,Desenhar,Python,Windows,Android,VSCode,Edge,Full-Stack,Sim,Nao,Nao,Nao,Nao,"Solteiro(a)",Parnaiba,Sim,Sim,Sim,Nao,Nao
+"21 - 22","1.61 - 1.70",Masculino,Parda,Ondulado,Sim,Animacao,Rock,Jogar,Python,Windows,Android,VSCode,Brave,Full-Stack,Sim,Sim,Nao,Nao,Sim,"Solteiro(a)",Parnaiba,Sim,Sim,Sim,Nao,Sim
+"21 - 22","1.61 - 1.70",Masculino,Parda,Ondulado,Nao,Acao,Ecletico,"Artes marciais",Python,Windows,Android,VSCode,Brave,Full-Stack,Sim,Sim,Nao,Sim,Sim,"Solteiro(a)",Parnaiba,Sim,Sim,Sim,Nao,Sim
+"21 - 22","1.50 - 1.60",Masculino,Branca,"Cacheado/Encaracolado",Sim,Terror,Eurobeat,Jogar,Lua,Windows,Android,"Bloco de Notas",Brave,Full-Stack,Nao,Sim,Nao,Nao,Sim,"Solteiro(a)",Brasilia,Sim,Nao,Sim,Nao,Nao
